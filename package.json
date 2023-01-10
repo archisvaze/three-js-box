@@ -1,19 +1,21 @@
 {
-  "name": "three-js",
+  "name": "threejs-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "typescript": "^4.9.3",
     "vite": "^4.0.0"
   },
   "dependencies": {
     "@tweakpane/core": "^1.1.1",
     "@tweakpane/plugin-essentials": "^0.1.5",
+    "@types/three": "^0.148.0",
     "three": "^0.148.0",
     "tweakpane": "^3.1.1"
   }
