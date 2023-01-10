@@ -1,23 +1,25 @@
+import * as THREE from "three";
+import { box } from "./core/box";
+import { camera } from "./core/camera";
+import { fpsGraph } from "./core/gui";
+import { ambientLight, directionalLight } from "./core/lights";
+import "./core/orbit-controls";
+
+import { plane } from "./core/plane";
+import { renderer, updateRenderer } from "./core/renderer";
 import "./style.css";
 
-import * as Three from "three";
-import { ambientLight, directionalLight } from "./core/lights";
-import { box } from "./core/box";
-import { renderer, updateRenderer } from "./core/renderer";
-import { camera } from "./core/camera";
-import { plane } from "./core/plane";
-import "./core/orbit-controls";
-import { fpsGraph } from "./core/gui";
-
-//Scene
-const scene = new Three.Scene();
+// Scene
+const scene = new THREE.Scene();
 
 scene.add(ambientLight);
 scene.add(directionalLight);
 
 scene.add(box);
-scene.add(camera);
 scene.add(plane);
+
+scene.add(camera);
+
 updateRenderer();
 
 const loop = () => {
